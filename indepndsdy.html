@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Card</title>
+    <!-- <link rel="stylesheet" href="web2.css"> -->
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://cdn.dribbble.com/users/1592949/screenshots/3696709/flag-of-pakistan.gif");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+.contact-card {
+    background: #d2f0c9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.pak h1 {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-size: 900;
+    position: absolute;
+    text-align: center;
+    color: white;
+    margin-top: -33rem;
+}
+ span{
+    
+    color: #5de686;
+}
+
+
+.profile-pic {
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+
+h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-size: 900;
+}
+
+.title {
+    color: #03020a;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-size: 900;
+
+}
+
+.info {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #b7b7b7;
+    color: #080101;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5de686;
+}
+
+#more-info-btn{
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 20px;
+}
+
+.hidden {
+     display: none; 
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 15px;
+    }
+    
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+    
+    button {
+        padding: 8px 12px;
+    }
+}
+
+</style>
+<body>
+<div  class="pak">
+    <h1>PAKISTAN ZINDABAD<br>
+    <span>Happy Independence</span></h1>
+</div>
+  
+     <div class="contact-card">
+        <img src="https://live.staticflickr.com/2831/11288441893_7c10462ddf_z.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>PAKISTAN</h2>
+        <p class="title">Hero Of Pakistan</p>
+        <button id="more-info-btn">More Info</button>
+        <div id="more-info" class="hidden">
+            <h2>Quaid-e-AZAM</h2>
+            <p>Muhammad Ali Jinnah[a] (born Mahomedali Jinnahbhai; 25 December 1876 – 11 September 1948) 
+                was a barrister, politician, and the founder of Pakistan. Jinnah served as the leader of
+                 the All-India Muslim League from 1913 until the inception of Pakistan on 14 August 1947,
+                  and then as the Republic of Pakistan's first governor-general until his death.
+
+                Born at Wazir Mansion in Karachi, Jinnah was trained as a barrister at Lincoln's
+                 Inn in London, England. Upon his return to India..</p>
+        </div>
+    </div> 
+    <script>
+
+document.getElementById('more-info-btn').addEventListener('click', function() {
+    const moreInfo = document.getElementById('more-info');
+    if (moreInfo.classList.contains('hidden')) {
+        moreInfo.classList.remove('hidden');
+        this.textContent = 'Less Info';
+    } else {
+        moreInfo.classList.add('hidden');
+        this.textContent = 'More Info';
+    }
+});
+
+// <div className="image-box">
+//           {/* <Image src="" alt="Tutorial 1" width={300} height={200} />
+//           <Image src="" alt="Tutorial 2" width={300} height={200} />
+//           <Image src="" alt="Tutorial 3" width={300} height={200} /> */}
+//         </div>
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
